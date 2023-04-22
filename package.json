@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "lint:eslint": "eslint --cache --max-warnings 0  \"src/**/*.{vue,ts,tsx}\" --fix",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -27,5 +26,11 @@
     "typescript": "^5.0.4",
     "vite": "^4.3.0",
     "vue-tsc": "^1.2.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }
