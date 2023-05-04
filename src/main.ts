@@ -1,9 +1,11 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+
 import { setupRouter } from './router'
 import { setupPinia } from './store'
+import App from './App.vue'
 
-import './styles/index.css'
+import '@unocss/reset/tailwind.css'
+import 'virtual:uno.css'
 
 function bootstrap() {
   const app = createApp(App)
